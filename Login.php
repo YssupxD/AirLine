@@ -62,7 +62,7 @@
     <!--a href to go home page: logo-->
     <a href="#"><img src="logo.png" style="height: 60px; width: 60px; float: left; margin: 10px 10px">
         <span style="color: floralwhite; font-size: 60px;">Air159339<span></a>
-    <a href="Login.html"><img class="login_icon" src="login.jpg"></a>
+    <a href="Login.php"><img class="login_icon" src="login.jpg"></a>
 </div>
 
 
@@ -94,7 +94,7 @@
 
 
         <tr>
-            <td class ="td1">Don't have an account? <a href = "registation.html">Sign up</a> </td>
+            <td class ="td1">Don't have an account? <a href = "registation.php">Sign up</a> </td>
         </tr>
 
 
