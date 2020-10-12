@@ -109,8 +109,12 @@ CREATE TABLE Users (
     username    VARCHAR(16)     NOT NULL    AUTO_INCREMENT,
     firstname   VARCHAR(16)     NOT NULL,
     lastname    VARCHAR(16)     NOT NULL,
-    password    VARCHAR(30)     NOT NULL
-    PRIMARY KEY(username)
+    password    VARCHAR(30)     NOT NULL,
+    origin      VARCHAR(4)      NOT NULL,
+    dest        VARCHAR(4)      NOT NULL,
+    PRIMARY KEY(username),
+    FOREIGN KEY(origin) REFERENCES Destinations(code),
+    FOREIGN KEY(dest) REFERENCES Destinations(code)
 );
 
 
