@@ -69,7 +69,7 @@
 <div class="maintable" method="post">
     <table class="table1" >
         <tr>
-            <td colspan="2" class = "td1"><h1>Login</h1></td>
+            <td colspan="2" class = "td1"><h1>Registration</h1></td>
         </tr>
 
         <tr>
@@ -77,21 +77,24 @@
         </tr>
 
         <tr>
-            <td  class = "td1" ><label for="username"><b>Username</b></label><input type="text" placeholder="Enter Email" name="username" id="username" required></td>
-            <td  class = "td1" ><input name="name" type="text" required/></td>
-            <td  class = "td1" ></td>
+            <td  class = "td1" ><label for="username"><b>Username</b></label>
+                <input type="text" placeholder="Enter Email" name="username" id="username" required></td>
         </tr>
 
         <tr>
-            <td  class = "td1" >Password</td>
-            <td  class = "td1" ><input name="Pass" type="text" required/></td>
-            <td  class = "td1" ></td>
+            <td  class = "td1" ><label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" id="psw" required></td>
         </tr>
 
         <tr>
-            <td colspan="2" class = "td1" style="text-align: center; font-size: large">Login</td>
+            <td  class = "td1"><label for="psw-repeat"><b>Repeat Password</b></label>
+                <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required></td>
         </tr>
 
+        <tr>
+            <td class="td1"><button id = type="submit" class="registerbtn">Register</button></td>
+
+        </tr>
 
         <tr>
             <td class ="td1">Already have an account? <a href="Login.php">Sign in</a> </td>
@@ -108,40 +111,5 @@
         <span style="margin-left: 7%">Email: 123-456789@339.com</span>
     </div>
 </footer>
-</body>
-</html>
-
-
-
-
-
-
-
-
-<!DOCTYPE html>
-<html>
-<head>
-    <div class="container">
-        <h1>Register</h1>
-        <p>Please fill in this form to create an account.</p>
-        <hr>
-
-        <label for="username"><b>Email</b></label>
-        <input type="text" placeholder="Enter Email" name="username" id="username" required>
-
-        <label for="psw"><b>Password</b></label>
-        <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
-
-        <label for="psw-repeat"><b>Repeat Password</b></label>
-        <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
-        <hr>
-
-        <button type="submit" class="registerbtn">Register</button>
-    </div>
-
-    <div class="container signin">
-        <p>Already have an account? <a href="Login.php">Sign in</a>.</p>
-    </div>
-</head>
 </body>
 </html>

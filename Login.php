@@ -56,14 +56,14 @@
 
 
 <body>
-
-
 <div class="header">
     <!--a href to go home page: logo-->
     <a href="#"><img src="logo.png" style="height: 60px; width: 60px; float: left; margin: 10px 10px">
         <span style="color: floralwhite; font-size: 60px;">Air159339<span></a>
     <a href="Login.php"><img class="login_icon" src="login.jpg"></a>
 </div>
+
+<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 
 
 <div class="maintable" method="post">
@@ -77,21 +77,23 @@
         </tr>
 
         <tr>
-            <td  class = "td1" >Username</td>
-            <td  class = "td1" ><input name="name" type="text" required/></td>
-            <td  class = "td1" ></td>
+            <td  class = "td1" ><label for="username"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="username" id="username" required > *</td>
         </tr>
 
         <tr>
-            <td  class = "td1" >Password</td>
-            <td  class = "td1" ><input name="Pass" type="text" required/></td>
-            <td  class = "td1" ></td>
+            <td  class = "td1" ><label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" id="psw" required> *</td>
         </tr>
 
         <tr>
-            <td colspan="2" class = "td1" style="text-align: center; font-size: large">Login</td>
+            <td class="td1"><button id="myButton" type="submit" class="loginbtn">Login</button></td>
+            <script type="text/javascript">
+                document.getElementById("myButton").onclick = function () {
+                    location.href = "airplane.php";
+                };
+            </script>
         </tr>
-
 
         <tr>
             <td class ="td1">Don't have an account? <a href = "registation.php">Sign up</a> </td>
