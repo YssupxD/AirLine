@@ -107,15 +107,20 @@ INSERT INTO TimeTable VALUES (34, 'IA012', 'NZTL', 'NZNE', 'Fri', '08:45:00', '0
 
 CREATE TABLE Users (
     username    VARCHAR(16)     NOT NULL    AUTO_INCREMENT,
-    firstname   VARCHAR(16)     NOT NULL,
-    lastname    VARCHAR(16)     NOT NULL,
     password    VARCHAR(30)     NOT NULL,
-    origin      VARCHAR(4)      NOT NULL,
-    dest        VARCHAR(4)      NOT NULL,
+    PRIMARY KEY(username)
+);
+
+CREATE TABLE Booking (
+    username    VARCHAR(16)    NOT NULL    AUTO_INCREMENT,
+    firstname   VARCHAR(16)    NOT NULL,
+    origin      VARCHAR(4)     NOT NULL,
+    dest        VARCHAR(4)     NOT NULL,
+    passenger   INT            NOT NULL,
     PRIMARY KEY(username),
     FOREIGN KEY(origin) REFERENCES Destinations(code),
     FOREIGN KEY(dest) REFERENCES Destinations(code)
-);
+)
 
 
 
