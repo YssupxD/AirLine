@@ -106,7 +106,7 @@ INSERT INTO TimeTable VALUES (33, 'IA011', 'NZNE', 'NZTL', 'Mon', '21:00:00', '0
 INSERT INTO TimeTable VALUES (34, 'IA012', 'NZTL', 'NZNE', 'Fri', '08:45:00', '01:45:00');
 
 CREATE TABLE User (
-    username    VARCHAR(16)     NOT NULL    AUTO_INCREMENT,
+    username    VARCHAR(16)     NOT NULL,
     password    VARCHAR(30)     NOT NULL,
     PRIMARY KEY(username)
 );
@@ -114,7 +114,7 @@ CREATE TABLE User (
 INSERT INTO User VALUES ('test', 'test');
 
 CREATE TABLE Booking(
-    username    VARCHAR(16)    NOT NULL    AUTO_INCREMENT,
+    username    VARCHAR(16)    NOT NULL,
     firstname   VARCHAR(16)    NOT NULL,
     origin      VARCHAR(4)     NOT NULL,
     dest        VARCHAR(4)     NOT NULL,
