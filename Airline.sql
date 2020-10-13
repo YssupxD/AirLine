@@ -105,13 +105,15 @@ INSERT INTO TimeTable VALUES (32, 'IA010', 'NZCI', 'NZNE', 'Sat', '17:00:00', '0
 INSERT INTO TimeTable VALUES (33, 'IA011', 'NZNE', 'NZTL', 'Mon', '21:00:00', '01:45:00');
 INSERT INTO TimeTable VALUES (34, 'IA012', 'NZTL', 'NZNE', 'Fri', '08:45:00', '01:45:00');
 
-CREATE TABLE Users (
+CREATE TABLE User (
     username    VARCHAR(16)     NOT NULL    AUTO_INCREMENT,
     password    VARCHAR(30)     NOT NULL,
     PRIMARY KEY(username)
 );
 
-CREATE TABLE Booking (
+INSERT INTO User VALUES ('test', 'test');
+
+CREATE TABLE Booking(
     username    VARCHAR(16)    NOT NULL    AUTO_INCREMENT,
     firstname   VARCHAR(16)    NOT NULL,
     origin      VARCHAR(4)     NOT NULL,
@@ -120,7 +122,7 @@ CREATE TABLE Booking (
     PRIMARY KEY(username),
     FOREIGN KEY(origin) REFERENCES Destinations(code),
     FOREIGN KEY(dest) REFERENCES Destinations(code)
-)
+);
 
 
 
