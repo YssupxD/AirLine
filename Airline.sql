@@ -48,15 +48,17 @@ CREATE TABLE Routes (
     point1    VARCHAR(4)  NOT NULL,
     point2    VARCHAR(4)  NOT NULL,
     distance  FLOAT       NOT NULL,   -- separation distance in nmi
+    craftID   VARCHAR(3)  NOT NULL,
     PRIMARY KEY(routeID),
     FOREIGN KEY(point1) REFERENCES Destinations(code),
-    FOREIGN KEY(point2) REFERENCES Destinations(code)
+    FOREIGN KEY(point2) REFERENCES Destinations(code),
+    FOREIGN KEY(craftID) REFERENCES Aircraft(craftID)
 );
-INSERT INTO Routes VALUES ('R01', 'NZNE', 'YSSY', 1164);
-INSERT INTO Routes VALUES ('R02', 'NZNE', 'NZRO', 137);
-INSERT INTO Routes VALUES ('R03', 'NZNE', 'NZCI', 581);
-INSERT INTO Routes VALUES ('R04', 'NZNE', 'NZGB', 54);
-INSERT INTO Routes VALUES ('R05', 'NZNE', 'NZTL', 472);
+INSERT INTO Routes VALUES ('R01', 'NZNE', 'YSSY', 1164, 'A01');
+INSERT INTO Routes VALUES ('R02', 'NZNE', 'NZRO', 137, 'A02');
+INSERT INTO Routes VALUES ('R03', 'NZNE', 'NZCI', 581, 'A02');
+INSERT INTO Routes VALUES ('R04', 'NZNE', 'NZGB', 54), 'A03';
+INSERT INTO Routes VALUES ('R05', 'NZNE', 'NZTL', 472, 'A03');
 
 CREATE TABLE TimeTable (
     tID         int           NOT NULL   AUTO_INCREMENT,
