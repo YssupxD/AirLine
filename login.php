@@ -18,7 +18,7 @@
             margin-right: 10px;
         }
         body{
-            background: url("airplane.jpg") no-repeat;
+            background: url("Res/airplane.jpg") no-repeat;
             background-size: cover;
             z-index: 10;
         }
@@ -58,9 +58,9 @@
 <body>
 <div class="header">
     <!--a href to go home page: logo-->
-    <a href="#"><img src="logo.png" style="height: 60px; width: 60px; float: left; margin: 10px 10px">
+    <a href="#"><img src="Res/logo.png" style="height: 60px; width: 60px; float: left; margin: 10px 10px">
         <span style="color: floralwhite; font-size: 60px;">Air159339<span></a>
-    <a href="Login.php"><img class="login_icon" src="login.jpg"></a>
+    <a href="login.php"><img class="login_icon" src="Res/login.jpg"></a>
 </div>
 
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
@@ -87,10 +87,10 @@
         </tr>
 
         <tr>
-            <td class="td1"><button id="myButton" type="submit" class="loginbtn">Login</button></td>
+            <td class="td1"><button id="loginButton" type="submit" class="loginbtn">Login</button></td>
             <script type="text/javascript">
-                document.getElementById("myButton").onclick = function () {
-                    location.href = "airplane.php";
+                document.getElementById("loginButton").onclick = function () {
+                    location.href = "index.php";
                 };
             </script>
         </tr>

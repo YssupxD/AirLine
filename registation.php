@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Login</title>
+    <title>Registration</title>
     <meta charset="UTF-8">
     <style>
         a:link, a:visited {text-decoration: none;}
@@ -18,7 +18,7 @@
             margin-right: 10px;
         }
         body{
-            background: url("airplane.jpg") no-repeat;
+            background: url("Res/airplane.jpg") no-repeat;
             background-size: cover;
             z-index: 10;
         }
@@ -53,16 +53,14 @@
         }
     </style>
 </head>
-
-
 <body>
 
 
 <div class="header">
     <!--a href to go home page: logo-->
-    <a href="#"><img src="logo.png" style="height: 60px; width: 60px; float: left; margin: 10px 10px">
+    <a href="#"><img src="Res/logo.png" style="height: 60px; width: 60px; float: left; margin: 10px 10px">
         <span style="color: floralwhite; font-size: 60px;">Air159339<span></a>
-    <a href="Login.php"><img class="login_icon" src="login.jpg"></a>
+    <a href="login.php"><img class="login_icon" src="login.jpg"></a>
 </div>
 
 
@@ -78,7 +76,7 @@
 
         <tr>
             <td  class = "td1" ><label for="username"><b>Username</b></label>
-                <input type="text" placeholder="Enter Email" name="username" id="username" required></td>
+                <input type="text" placeholder="Enter Username" name="username" id="username" required></td>
         </tr>
 
         <tr>
@@ -92,12 +90,38 @@
         </tr>
 
         <tr>
-            <td class="td1"><button id = type="submit" class="registerbtn">Register</button></td>
+            <td class="td1"><button id = "registerButton" type="submit" class="registerbtn">Register</button></td>
+            <script>
+                document.getElementById("registerButton").onclick = function () {
+                    <?php
+                    $un = document.getElementById("username");
+                    $psw = document.getElementById("psw");
+                    $pswr = document.getElementById("psw-repeat");
+
+                    if($psw == $pswr) {
+
+                        include_once ("db.php");
+                        $conn = new mysqli($hostname, $username, $password, $database);
+
+                        if($conn -> connect_error) {
+                            die("connection failed" . $conn -> connect_error);
+                        } else {
+                            $stmt = $conn->prepare("INSERT INTO User (username password) VALUES (?, ?)");
+                            $stmt->bind_param("ss", $un, $psw);
+                            $stmt->execute();
+                        }
+                    }else {
+                        alert("Two passwords don't match.");
+                    }
+                    ?>
+                    location.href = "Login.php";
+                };
+            </script>
 
         </tr>
 
         <tr>
-            <td class ="td1">Already have an account? <a href="Login.php">Sign in</a> </td>
+            <td class ="td1">Already have an account? <a href="login.php">Sign in</a> </td>
         </tr>
 
 
