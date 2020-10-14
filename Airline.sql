@@ -116,7 +116,7 @@ CREATE TABLE User (
 INSERT INTO User VALUES ('test', 'test');
 
 CREATE TABLE Booking(
-    username    VARCHAR(16)    NOT NULL,
+    username    VARCHAR(16)    NOT NULL    UNIQUE,
     firstname   VARCHAR(16)    NOT NULL,
     origin      VARCHAR(4)     NOT NULL,
     dest        VARCHAR(4)     NOT NULL,
