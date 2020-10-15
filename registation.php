@@ -86,38 +86,12 @@
 
         <tr>
             <td  class = "td1"><label for="psw-repeat"><b>Repeat Password</b></label>
-                <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required></td>
+                <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
+            </td>
         </tr>
 
         <tr>
-            <td class="td1"><button id = "registerButton" type="submit" class="registerbtn">Register</button></td>
-            <script>
-                document.getElementById("registerButton").onclick = function () {
-                    <?php
-                    $un = document.getElementById("username");
-                    $psw = document.getElementById("psw");
-                    $pswr = document.getElementById("psw-repeat");
-
-                    if($psw == $pswr) {
-
-                        include_once ("db.php");
-                        $conn = new mysqli($hostname, $username, $password, $database);
-
-                        if($conn -> connect_error) {
-                            die("connection failed" . $conn -> connect_error);
-                        } else {
-                            $stmt = $conn->prepare("INSERT INTO User (username password) VALUES (?, ?)");
-                            $stmt->bind_param("ss", $un, $psw);
-                            $stmt->execute();
-                        }
-                    }else {
-                        alert("Two passwords don't match.");
-                    }
-                    ?>
-                    location.href = "Login.php";
-                };
-            </script>
-
+            <td class="td1"><input type = "button" id = "registerButton" value = "Register"/></td>
         </tr>
 
         <tr>

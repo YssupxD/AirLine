@@ -22,7 +22,7 @@
             margin-right: 10px;
         }
         body{
-            background: url("Res/airplane.jpg") no-repeat;
+            background: url("airplane.jpg") no-repeat;
             background-size: cover;
             z-index: 10;
         }
@@ -52,8 +52,8 @@
         }
         footer {
             width: 100%;
-            position: absolute;
-            bottom: 0;
+            position:fixed;
+            bottom:0px;
         }
 
     </style>
@@ -62,9 +62,9 @@
 <body>
 <div class="header">
     <!--a href to go home page: logo-->
-    <a href="index.php"><img src="Res/logo.png" style="height: 60px; width: 60px; float: left; margin: 10px 10px">
+    <a href="airplane.php"><img src="logo.png" style="height: 60px; width: 60px; float: left; margin: 10px 10px">
         <span style="color: floralwhite; font-size: 60px;">Air159339<span></a>
-    <a href="login.php"><img class="login_icon" src="login.jpg"></a>
+    <a href="Login.php"><img class="login_icon" src="login.jpg"></a>
 </div>
 
 
@@ -76,9 +76,9 @@
         <tr>
             <form method="post" action="checkDetails.php">
                 <td  class = "td1" >Search a fight</td>
-                <td  class = "td1" >From: </br>Dairy Flat Airport
+                <td  class = "td1">From: </br>Dairy Flat Airport
                 </td>
-                <td  class = "td1" >To: </br>
+                <td  class = "td1">To: </br>
                     <select name="fly_to">
                         <option value="YSSY">Sydney Kingsford Smith Airport</option>
                         <option value="NZRO">Rotorua Aiport</option>
@@ -101,11 +101,11 @@
         </tr>
 
         <tr>
-            <form method="post" action="checkDetails.php">
+            <form method="post" action="checkDetails2.php">
                 <td  class = "td1" >Search a fight</td>
 
                 <td  class = "td1" >From: </br>
-                    <select name="fly_to">
+                    <select name="fly_from">
                         <option value="YSSY">Sydney Kingsford Smith Airport</option>
                         <option value="NZRO">Rotorua Aiport</option>
                         <option value="NZCI">Tuuta Aiport</option>

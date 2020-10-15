@@ -63,8 +63,6 @@
     <a href="login.php"><img class="login_icon" src="Res/login.jpg"></a>
 </div>
 
-<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
-
 
 <div class="maintable" method="post">
     <table class="table1" >
@@ -77,7 +75,7 @@
         </tr>
 
         <tr>
-            <td  class = "td1" ><label for="username"><b>Username</b></label>
+            <td  class = "td1" >Username:
                 <input type="text" placeholder="Enter Username" name="username" id="username" required > *</td>
         </tr>
 
@@ -88,11 +86,6 @@
 
         <tr>
             <td class="td1"><button id="loginButton" type="submit" class="loginbtn">Login</button></td>
-            <script type="text/javascript">
-                document.getElementById("loginButton").onclick = function () {
-                    location.href = "index.php";
-                };
-            </script>
         </tr>
 
         <tr>
