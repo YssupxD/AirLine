@@ -60,7 +60,7 @@
     <!--a href to go home page: logo-->
     <a href="#"><img src="Res/logo.png" style="height: 60px; width: 60px; float: left; margin: 10px 10px">
         <span style="color: floralwhite; font-size: 60px;">Air159339<span></a>
-    <a href="login.php"><img class="login_icon" src="Res/login.jpg"></a>
+    <a href="index.php"><img class="login_icon" src="Res/login.jpg"></a>
 </div>
 
 
@@ -124,7 +124,7 @@
 
             <tr>
                 <td class ="td1">
-                    Already have an account? <a href="login.php">Sign in</a>
+                    Already have an account? <a href="index.php">Sign in</a>
                 </td>
             </tr>
         </table>

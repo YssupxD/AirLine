@@ -1,11 +1,7 @@
-<?php
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>159.339 air</title>
+    <title>Login</title>
     <meta charset="UTF-8">
     <style>
         a:link, a:visited {text-decoration: none;}
@@ -48,97 +44,89 @@
             margin: auto;
             border-collapse:separate;
             border-spacing:0px 30px;
-            width: 1430px;
+            width: 750px;
         }
         footer {
             width: 100%;
-            position:fixed;
-            bottom:0px;
+            position: absolute;
+            bottom: 0;
         }
-
     </style>
-
 </head>
+
+
 <body>
 <div class="header">
     <!--a href to go home page: logo-->
-    <a href="airplane.php"><img src="Res/logo.png" style="height: 60px; width: 60px; float: left; margin: 10px 10px">
+    <a href="#"><img src="Res/logo.png" style="height: 60px; width: 60px; float: left; margin: 10px 10px">
         <span style="color: floralwhite; font-size: 60px;">Air159339<span></a>
-    <a href="Login.php"><img class="login_icon" src="Res/login.jpg"></a>
+    <a href="index.php"><img class="login_icon" src="Res/login.jpg"></a>
 </div>
 
 
-<div class="maintable">
+<div class="maintable" >
+    <form id="loginform" action="loginaction.php" method="post">
+        <table class="table1" >
+            <tr>
+                <td colspan="2" class = "td1"><h1>Login</h1></td>
+            </tr>
 
-    <table class="table1">
-        <tr><td colspan="2" class = "td1"><h1>Customize Your Trip</h1></td></tr>
+            <tr>
+               <td class="td1"> <span class="error">* required filed</span></td>
+            </tr>
 
-        <tr>
-            <form method="post" action="checkDetails.php">
-                <td  class = "td1" >Search a fight</td>
-                <td  class = "td1">From: </br>Dairy Flat Airport
+            <tr>
+                <td  class = "td1" >Username:
+                    <input type="text" placeholder="Enter Username" name="username" id="username" required = "required"
+                           value = "<?php echo isset($_COOKIE[""]) ? $_COOKIE[""] : ""; ?>"> *
                 </td>
-                <td  class = "td1">To: </br>
-                    <select name="fly_to">
-                        <option value="YSSY">Sydney Kingsford Smith Airport</option>
-                        <option value="NZRO">Rotorua Aiport</option>
-                        <option value="NZCI">Tuuta Aiport</option>
-                        <option value="NZGB">Claris Aerodrome</option>
-                        <option value="NZTL">Lake Tekapo Airport</option>
-                    </select>
+            </tr>
+
+            <tr>
+                <td  class = "td1" >Password:
+                    <input type="password" placeholder="Enter Password" name="psw" id="psw" required="required"> *</td>
+            </tr>
+
+            <tr>
+                <td class = "td1" colspan="2"> <input type="checkbox" name="remember"><small>Remember me</td>
+            </tr>
+
+            <tr>
+                <td class = "td1" colspan="2" style="color:red;font-size:20px;">
+                    <?php
+                    $err = isset($_GET["err"]) ? $_GET["err"] : "";
+                    switch ($err) {
+                        case 1:
+                            echo "Username or password wrong！";
+                            break;
+
+                        case 2:
+                            echo "Username or password empty！";
+                            break;
+                    }
+                    ?>
                 </td>
-                <td  class = "td1" colspan="2" style="white-space:nowrap;">Time between: </br>
-                    <input type="datetime-local" id="the_time1"
-                           name="the_timeA"
-                           min="2020-10-15T00:00" max="2021-12-31T00:00"> -
+            </tr>
 
-                    <input type="datetime-local" id="the_time1"
-                           name="the_timeB"
-                           min="2020-10-15T00:00" max="2021-12-31T00:00">
+            <tr> <td class="td1" colspan="2">
+                    <input type="submit" id="login" name="login" value="Login">
+                    <input type="reset" id="reset" name="reset" value="Reset">
                 </td>
-                <td  class = "td1" ><input type="submit" value="SEARCH"></td>
-            </form>
-        </tr>
+            </tr>
 
-        <tr>
-            <form method="post" action="checkDetails2.php">
-                <td  class = "td1" >Search a fight</td>
+            <tr>
+                <td class ="td1">Don't have an account? <a href = "registration.php">Sign up</a> </td>
+            </tr>
 
-                <td  class = "td1" >From: </br>
-                    <select name="fly_from">
-                        <option value="YSSY">Sydney Kingsford Smith Airport</option>
-                        <option value="NZRO">Rotorua Aiport</option>
-                        <option value="NZCI">Tuuta Aiport</option>
-                        <option value="NZGB">Claris Aerodrome</option>
-                        <option value="NZTL">Lake Tekapo Airport</option>
-                    </select>
-                </td>
-                <td  class = "td1" >To: </br>Dairy Flat Airport
-                </td>
-                <td  class = "td1" colspan="2" style="white-space:nowrap;">Time between: </br>
-                    <input type="datetime-local" id="the_time1"
-                           name="the_timeA"
-                           min="2020-10-15T00:00" max="2021-12-31T00:00"> -
-
-                    <input type="datetime-local" id="the_time1"
-                           name="the_timeB"
-                           min="2020-10-15T00:00" max="2021-12-31T00:00">
-                </td>
-                <td  class = "td1" ><input type="submit" value="SEARCH"></td>
-            </form>
-        </tr>
-
-
-        <tr></tr>
-
-    <table>
+        </table>
+    </form>
 </div>
 
 <footer>
     <div class="connect_us" style="font-size:large; text-align: center">
-                <span>Help & support</span>
-                <span style="margin-left: 7%">Ph:123-456789</span>
-                <span style="margin-left: 7%">Email: 123-456789@339.com</span>
+        <span>Help & support</span>
+        <span style="margin-left: 7%">Ph:123-456789</span>
+        <span style="margin-left: 7%">Email: 123-456789@339.com</span>
     </div>
 </footer>
 </body>

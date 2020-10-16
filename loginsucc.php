@@ -16,9 +16,9 @@
         <?php
         echo $username;
         ?>
-        <br/> <a href="login.php">Quit</a>
+        <br/> <a href="index.php">Quit</a>
         <?php
-        header("refresh:3;url=index.php");
+        header("refresh:3;url=airplane.php");
         print('Loading home page in 3s...<br>');
         ?>
         <?php

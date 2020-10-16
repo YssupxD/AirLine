@@ -17,7 +17,7 @@
         echo $username;
         ?>
         <?php
-        header("refresh:3;url=login.php");
+        header("refresh:3;url=index.php");
         print('Jumping to login page in 3s...<br>');
         ?>
         <?php
