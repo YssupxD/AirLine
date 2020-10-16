@@ -118,12 +118,12 @@ CREATE TABLE Userinfo (
 );
 
 CREATE TABLE Booking (
-    orderID     int             NOT NULL    AUTO_INCREMENT  UNIQUE,
     username    VARCHAR(16)     NOT NULL    UNIQUE,
+    firstname   VARCHAR(16)     NOT NULL,
+    lastname    VARCHAR(16)     NOT NULL,
     origin      VARCHAR(4)      NOT NULL,
     dest        VARCHAR(4)      NOT NULL,
-    PRIMARY KEY(orderID),
-    FOREIGN KEY(username) REFERENCES Userinfo(username),
+    FOREIGN KEY(username, firstname, lastname) REFERENCES Userinfo(username, firstname, lastname),
     FOREIGN KEY(origin) REFERENCES Destinations(code),
     FOREIGN KEY(dest) REFERENCES Destinations(code)
 );
