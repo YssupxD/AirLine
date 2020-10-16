@@ -11,15 +11,14 @@
     session_start();
     $username = isset($_SESSION['user']) ? $_SESSION['user'] : "";
     if (!empty($username)) { ?>
-        <h1>Login Successfully！</h1>
+        <h1>Registration Successfully！</h1>
         Welcome you!
         <?php
         echo $username;
         ?>
-        <br/> <a href="login.php">Quit</a>
         <?php
-        header("refresh:3;url=index.php");
-        print('Loading home page in 3s...<br>');
+        header("refresh:3;url=login.php");
+        print('Jumping to login page in 3s...<br>');
         ?>
         <?php
     } else {

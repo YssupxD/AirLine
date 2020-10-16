@@ -22,7 +22,7 @@
             margin-right: 10px;
         }
         body{
-            background: url("airplane.jpg") no-repeat;
+            background: url("Res/airplane.jpg") no-repeat;
             background-size: cover;
             z-index: 10;
         }
@@ -62,9 +62,9 @@
 <body>
 <div class="header">
     <!--a href to go home page: logo-->
-    <a href="airplane.php"><img src="logo.png" style="height: 60px; width: 60px; float: left; margin: 10px 10px">
+    <a href="airplane.php"><img src="Res/logo.png" style="height: 60px; width: 60px; float: left; margin: 10px 10px">
         <span style="color: floralwhite; font-size: 60px;">Air159339<span></a>
-    <a href="Login.php"><img class="login_icon" src="login.jpg"></a>
+    <a href="Login.php"><img class="login_icon" src="Res/login.jpg"></a>
 </div>
 
 

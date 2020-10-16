@@ -15,15 +15,17 @@ if ($password == $re_password) {
     //check if username has been taken
     if ($username == $row['username']) {
         //username has been taken, error info
-        header("Location:register.php?err=1");
+        header("Location:registration.php?err=1");
     } else {
-        //username has not been
+        //username has not been taken
         $sql_insert = "INSERT INTO Userinfo(username,password) VALUES('$username','$password')";
         mysqli_query($conn, $sql_insert);
-        header("Location:register.php?err=3");
+        header("Location:registration.php?err=3");
+        print('Loading home page in 3s...<br>');
     } //close connection
+    header("Location:registrationsucc.php");
     mysqli_close($conn);
 } else {
-    header("Location:register.php?err=2");
+    header("Location:registration.php?err=2");
 }
 ?>

@@ -1,6 +1,6 @@
 <?php
 $username = isset($_POST['username']) ? $_POST['username'] : "";
-$password = isset($_POST['password']) ? $_POST['password'] : "";
+$password = isset($_POST['psw']) ? $_POST['psw'] : "";
 $remember = isset($_POST['remember']) ? $_POST['remember'] : "";
 //check if info is empty.
 if (!empty($username) && !empty($password)) {
