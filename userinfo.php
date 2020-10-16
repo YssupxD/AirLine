@@ -81,22 +81,24 @@
                         die("Connection Failed" . $conn->connect_error);
                     }
 
-                    $sql = "SELECT username FROM Userinfo WHERE logged = 'Yes'";
+                    $sql = "SELECT Userinfo.username, Userinfo.firstname, Userinfo.lastname, Booking.origin, Booking.dest
+                    FROM Userinfo
+                    INNER JOIN Booking
+                    WHERE Userinfo.logged = 'Yes'";
                     $result = mysqli_query($conn, $sql);
-
-                    while($row = mysqli_fetch_array($result))
-                    {
-                        $username = $row['username'];
-                    }
-
-                    $sql1 = "SELECT * FROM Booking WHERE username = '$username'";
-                    $result = mysqli_query($conn, $sql1);
-                    if(!$result){
+                    if($result = 'NULL'){
                         echo "You have not booked any Flight";
                     }else{
                         while($row = mysqli_fetch_array($result))
                         {
-                            echo $row['username'] . " " . $row[''];
+                            $username = $row['username'];
+                            echo "Username:" . $row['username'];
+                            echo "<br>";
+                            echo "Name: " . $row['firstname'] . " " . $row['lastname'];
+                            echo "<br>";
+                            echo "From: " . $row['origin'];
+                            echo "<br>";
+                            echo "To: " . $row['dest'];
                             echo "<br>";
                         }
                     }

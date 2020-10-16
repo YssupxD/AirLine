@@ -19,10 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5926c56b-b779-48f5-8347-b49d15fef349" name="Default Changelist" comment="2.2">
+    <list default="true" id="5926c56b-b779-48f5-8347-b49d15fef349" name="Default Changelist" comment="2.3">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Airline.sql" beforeDir="false" afterPath="$PROJECT_DIR$/Airline.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookDetails.php" beforeDir="false" afterPath="$PROJECT_DIR$/bookDetails.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/userinfo.php" beforeDir="false" afterPath="$PROJECT_DIR$/userinfo.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -76,7 +75,7 @@
       <workItem from="1602469718183" duration="1181000" />
       <workItem from="1602471150907" duration="13550000" />
       <workItem from="1602645778671" duration="15618000" />
-      <workItem from="1602817825588" duration="3531000" />
+      <workItem from="1602817825588" duration="5188000" />
     </task>
     <task id="LOCAL-00001" summary="1.1">
       <created>1602472131603</created>
@@ -239,7 +238,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602817745042</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="2.3">
+      <created>1602824924087</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1602824924087</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -269,7 +275,8 @@
     <MESSAGE value="2.0" />
     <MESSAGE value="2.1" />
     <MESSAGE value="2.2" />
-    <option name="LAST_COMMIT_MESSAGE" value="2.2" />
+    <MESSAGE value="2.3" />
+    <option name="LAST_COMMIT_MESSAGE" value="2.3" />
   </component>
   <component name="WindowStateProjectService">
     <state x="388" y="89" key="#PHP" timestamp="1602471860895">
