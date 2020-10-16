@@ -111,16 +111,17 @@ INSERT INTO TimeTable VALUES (34, 'IA012', 'NZTL', 'NZNE', 'Fri', '08:45:00', '0
 CREATE TABLE Userinfo (
     username    VARCHAR(16)     NOT NULL    UNIQUE,
     password    VARCHAR(30)     NOT NULL,
+    firstname   VARCHAR(16)     NOT NULL,
+    lastname    VARCHAR(16)     NOT NULL,
+    logged      VARCHAR(5)      DEFAULT'No',
     PRIMARY KEY(username)
 );
 
 CREATE TABLE Booking (
     orderID     int             NOT NULL    AUTO_INCREMENT  UNIQUE,
     username    VARCHAR(16)     NOT NULL    UNIQUE,
-    firstname   VARCHAR(16)     NOT NULL,
-    lastname    VARCHAR(16)     NOT NULL,
     origin      VARCHAR(4)      NOT NULL,
-    dest        VARCHAR (4)     NOT NULL,
+    dest        VARCHAR(4)      NOT NULL,
     PRIMARY KEY(orderID),
     FOREIGN KEY(username) REFERENCES Userinfo(username),
     FOREIGN KEY(origin) REFERENCES Destinations(code),

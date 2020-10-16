@@ -1,7 +1,3 @@
-<?php
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -64,7 +60,9 @@
     <!--a href to go home page: logo-->
     <a href="airplane.php"><img src="Res/logo.png" style="height: 60px; width: 60px; float: left; margin: 10px 10px">
         <span style="color: floralwhite; font-size: 60px;">Air159339<span></a>
-    <a href="Login.php"><img class="login_icon" src="Res/login.jpg"></a>
+    <a href="Userinfo.php">Hello, <?php ?></a>
+    <a herf=""><img class="login_icon" src="Res/logout.jpg"></a>
+
 </div>
 
 

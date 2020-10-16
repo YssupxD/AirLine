@@ -24,6 +24,8 @@ if (!empty($username) && !empty($password)) {
         fwrite($f, $info);
         fclose($f);
         header("Location:loginsucc.php");
+        $sql_update = "UPDATE Userinfo SET logged = 'Yes' WHERE username = '$username' ";
+        $update = mysqli_query($conn, $sql_update);
         mysqli_close($conn);
     }
     else
