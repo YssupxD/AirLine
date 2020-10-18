@@ -60,30 +60,37 @@
 
 <div class="header">
     <!--a href to go home page: logo-->
-    <a href="#"><img src="Res/logo.png" style="height: 60px; width: 60px; float: left; margin: 10px 10px">
+    <a href="airplane.php"><img src="Res/logo.png" style="height: 60px; width: 60px; float: left; margin: 10px 10px">
         <span style="color: floralwhite; font-size: 60px;">Air159339<span></a>
-    <a href="userinfo.php"><img class="login_icon" src="Res/logout.jpg"></a>
+    <span style="color: floralwhite; font-size: 60px; float:right"><a href="Userinfo.php">Hello, <?php      echo '&nbsp;&nbsp;';?></a>
+    <a herf=""><img class="login_icon" src="Res/logout.jpg"></a></span>
+
 </div>
 
 
 <div class="maintable" method="post">
     <table class="table1" >
         <tr>
-            <td colspan="2" class = "td1"><h1>Please check your details and Flight: </h1></td>
+            <td colspan="2" class = "td1"><h1>Please check details of the Flight: </h1></td>
         </tr>
 
         <tr>
         </tr>
-
         <tr>
-            <td  class = "td1" >First Name: </td>
-            <td  class = "td1" >Not finished, read from db</td>
+            <td  class = "td1" >Aircraft model: </td>
+            <td  class = "td1" ><?php  ?></td>
             <td  class = "td1" ></td>
         </tr>
 
         <tr>
-            <td  class = "td1" >Second Name: </td>
-            <td  class = "td1" >Not finished, read from db</td>
+            <td  class = "td1" >Date: </td>
+            <td  class = "td1" ><?php echo $_POST['book_date']; ?></td>
+            <td  class = "td1" ></td>
+        </tr>
+
+        <tr>
+            <td  class = "td1" >Time: </td>
+            <td  class = "td1" ><?php ?></td>
             <td  class = "td1" ></td>
         </tr>
 

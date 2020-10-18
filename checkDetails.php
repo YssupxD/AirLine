@@ -7,7 +7,7 @@ function weekday($time)
     /* firstname lastname Airplane time */
 function search_result($des, $timeA, $timeB){
     //check connection with the database
-    $link = mysqli_connect('localhost', 'root', '9512');
+    $link = mysqli_connect('localhost', 'jojo', 'spaceman');
     if (!$link) {
         exit('Did not connect with the database');
     }
@@ -51,7 +51,7 @@ function search_result($des, $timeA, $timeB){
     $result = $link->query($join);
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()){
-            echo '<tr><td class = "td1">'."Aircraft model: </td><td class = \"td1\">".$row["model"].'</td><td class="td1">'.$timeA.'</td><td class="td1">'.$timeB.'</td></tr>';
+            echo '<tr><td class = "td1" id="1001">'."Aircraft model: </td><td class = \"td1\">".$row["model"].'</td><td class="td1">'.$timeA.'</td><td class="td1">'.$timeB.'</td></tr>';
         }
     } else {
         echo "<tr><td class = \"td1\">There is NO result.</td></tr>";
@@ -61,7 +61,7 @@ function search_result($des, $timeA, $timeB){
         while ($row = $weekday->fetch_assoc()){
             for($i=0; $i<$days; $i++){
                 if(weekday($date[$i]) == $row["detDay"]){
-                    echo '<form method="post" action="bookDetails.php"><tr></td><td class = "td1">'."Date and Time: </td><td class = \"td1\">".$date[$i]." ".$row["depTime"].'</td></td><td class = "td1">'."Flight Time: ".$row["flightTime"].'</td><td  class = "td1" >Capacity: '.$row["capacity"].'</td><td  class = "td1" ><input type="submit" value="BOOK"></td></tr></form>';
+                    echo '<form name="bookD" method="post" action="bookDetails.php"><tr></td><td class = "td1">'."Date and Time: </td><td class = \"td1\">"."<input type='hidden' name='book_date' value='$date[$i]'>".$date[$i]." ".$row["depTime"].'</td></td><td class = "td1">'."Flight Time: ".$row["flightTime"].'</td><td  class = "td1" >Capacity: '.$row["capacity"].'</td><td  class = "td1" ><input type="submit" value="BOOK"></td></tr></form>';
                 }
             }
         }
@@ -134,14 +134,16 @@ function search_result($des, $timeA, $timeB){
 
 <div class="header">
     <!--a href to go home page: logo-->
-    <a href="#"><img src="Res/logo.png" style="height: 60px; width: 60px; float: left; margin: 10px 10px">
+    <a href="airplane.php"><img src="Res/logo.png" style="height: 60px; width: 60px; float: left; margin: 10px 10px">
         <span style="color: floralwhite; font-size: 60px;">Air159339<span></a>
-    <a href="userinfo.php"><img class="login_icon" src="Res/logout.jpg"></a>
+    <span style="color: floralwhite; font-size: 60px; float:right"><a href="Userinfo.php">Hello, <?php      echo '&nbsp;&nbsp;';?></a>
+    <a herf=""><img class="login_icon" src="Res/logout.jpg"></a></span>
+
 </div>
 
 
 <div class="maintable" method="post">
-    <table class="table1" >
+    <table class="table1">
         <tr>
             <td colspan="2" class = "td1"><h1>Flights: </h1></td>
         </tr>

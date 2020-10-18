@@ -7,7 +7,7 @@ function weekday($time)
 /* firstname lastname Airplane time */
 function search_result($des, $timeA, $timeB){
     //check connection with the database
-    $link = mysqli_connect('localhost', 'root', '9512');
+    $link = mysqli_connect('localhost', 'jojo', 'spaceman');
     if (!$link) {
         exit('Did not connect with the database');
     }
@@ -134,9 +134,11 @@ function search_result($des, $timeA, $timeB){
 
 <div class="header">
     <!--a href to go home page: logo-->
-    <a href="#"><img src="Res/logo.png" style="height: 60px; width: 60px; float: left; margin: 10px 10px">
+    <a href="airplane.php"><img src="Res/logo.png" style="height: 60px; width: 60px; float: left; margin: 10px 10px">
         <span style="color: floralwhite; font-size: 60px;">Air159339<span></a>
-    <a href="userinfo.php"><img class="login_icon" src="Res/logout.jpg"></a>
+    <span style="color: floralwhite; font-size: 60px; float:right"><a href="Userinfo.php">Hello, <?php      echo '&nbsp;&nbsp;';?></a>
+    <a herf=""><img class="login_icon" src="Res/logout.jpg"></a></span>
+
 </div>
 
 
