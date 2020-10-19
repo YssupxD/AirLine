@@ -9,7 +9,7 @@ $re_password = isset($_POST['re_password']) ? $_POST['re_password'] : "";
 
 if ($password == $re_password) {
     //establish connection
-    $conn = mysqli_connect("localhost", "root", "9512", "Airline");
+    $conn = mysqli_connect("localhost", "jojo", "spaceman", "Airline");
     //prepare query line
     $sql_select = "SELECT username FROM Userinfo WHERE username = '$username'";
     //execute qurey.

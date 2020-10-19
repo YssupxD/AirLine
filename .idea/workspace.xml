@@ -19,7 +19,19 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5926c56b-b779-48f5-8347-b49d15fef349" name="Default Changelist" comment="2.3" />
+    <list default="true" id="5926c56b-b779-48f5-8347-b49d15fef349" name="Default Changelist" comment="2.3">
+      <change afterPath="$PROJECT_DIR$/bookingaction.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Airline.sql" beforeDir="false" afterPath="$PROJECT_DIR$/Airline.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/airplane.php" beforeDir="false" afterPath="$PROJECT_DIR$/airplane.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookDetails.php" beforeDir="false" afterPath="$PROJECT_DIR$/bookDetails.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkDetails.php" beforeDir="false" afterPath="$PROJECT_DIR$/checkDetails.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkDetails2.php" beforeDir="false" afterPath="$PROJECT_DIR$/checkDetails2.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/registration.php" beforeDir="false" afterPath="$PROJECT_DIR$/registration.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/registrationsucc.php" beforeDir="false" afterPath="$PROJECT_DIR$/registrationsucc.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userinfo.php" beforeDir="false" afterPath="$PROJECT_DIR$/userinfo.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -50,6 +62,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -72,6 +85,8 @@
       <workItem from="1602471150907" duration="13550000" />
       <workItem from="1602645778671" duration="15618000" />
       <workItem from="1602817825588" duration="5328000" />
+      <workItem from="1603011830521" duration="1240000" />
+      <workItem from="1603063062685" duration="4143000" />
     </task>
     <task id="LOCAL-00001" summary="1.1">
       <created>1602472131603</created>
@@ -248,7 +263,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602828550984</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="3.0">
+      <created>1603011853250</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1603011853250</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -279,7 +301,8 @@
     <MESSAGE value="2.1" />
     <MESSAGE value="2.2" />
     <MESSAGE value="2.3" />
-    <option name="LAST_COMMIT_MESSAGE" value="2.3" />
+    <MESSAGE value="3.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="3.0" />
   </component>
   <component name="WindowStateProjectService">
     <state x="388" y="89" key="#PHP" timestamp="1602471860895">
@@ -306,15 +329,15 @@
       <screen x="0" y="23" width="1440" height="833" />
     </state>
     <state x="333" y="144" key="Github.UntrackedFilesDialog/0.23.1440.833@0.23.1440.833" timestamp="1602470363419" />
-    <state x="539" y="375" key="NewPhpFileDialog" timestamp="1602823956790">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state x="539" y="370" key="NewPhpFileDialog" timestamp="1603066568892">
+      <screen x="0" y="23" width="1440" height="833" />
     </state>
     <state x="539" y="375" key="NewPhpFileDialog/0.0.1440.900@0.0.1440.900" timestamp="1602823956790" />
-    <state x="539" y="370" key="NewPhpFileDialog/0.23.1440.833@0.23.1440.833" timestamp="1602471819066" />
-    <state x="320" y="169" key="Vcs.Push.Dialog.v2" timestamp="1602828554186">
+    <state x="539" y="370" key="NewPhpFileDialog/0.23.1440.833@0.23.1440.833" timestamp="1603066568892" />
+    <state x="320" y="169" key="Vcs.Push.Dialog.v2" timestamp="1603011856758">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="169" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1602828554186" />
+    <state x="320" y="169" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1603011856758" />
     <state x="320" y="179" key="Vcs.Push.Dialog.v2/0.23.1440.833@0.23.1440.833" timestamp="1602817753531" />
     <state x="386" y="180" width="670" height="676" key="search.everywhere.popup" timestamp="1602642027504">
       <screen x="0" y="23" width="1440" height="833" />

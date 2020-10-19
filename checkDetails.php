@@ -52,23 +52,31 @@ function search_result($des, $timeA, $timeB){
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()){
             echo '<tr><td class = "td1" id="1001">'."Aircraft model: </td><td class = \"td1\">".$row["model"].'</td><td class="td1">'.$timeA.'</td><td class="td1">'.$timeB.'</td></tr>';
+            $aircraft = $row["model"];
         }
     } else {
         echo "<tr><td class = \"td1\">There is NO result.</td></tr>";
     }
-
     if ($weekday->num_rows > 0) {
         while ($row = $weekday->fetch_assoc()){
             for($i=0; $i<$days; $i++){
                 if(weekday($date[$i]) == $row["detDay"]){
-                    echo '<form name="bookD" method="post" action="bookDetails.php"><tr></td><td class = "td1">'."Date and Time: </td><td class = \"td1\">"."<input type='hidden' name='book_date' value='$date[$i]'>".$date[$i]." ".$row["depTime"].'</td></td><td class = "td1">'."Flight Time: ".$row["flightTime"].'</td><td  class = "td1" >Capacity: '.$row["capacity"].'</td><td  class = "td1" ><input type="submit" value="BOOK"></td></tr></form>';
+                    echo '<form name="bookD" method="post" action="bookDetails.php"><tr></td><td class = "td1">';
+                    echo "Date and Time: </td><td class = \"td1\">"."<input type='hidden' name='book_date' value='$date[$i]'>".$date[$i]." ".$row["depTime"].'</td></td><td class = "td1">'."Flight Time: ".$row["flightTime"].'</td><td  class = "td1" >Capacity: '.$row["capacity"].'</td><td  class = "td1" ><input type="submit" value="BOOK"></td></tr>';
+                    echo "<input type=hidden name=flt_time value=" . $row["depTime"] . ">";
+                    echo "<input type=hidden name=aircraft value=$aircraft>";
+                    echo "<input type=hidden name=from_w value=" . $row["origin"] . " >";
+                    echo "<input type=hidden name=to_w value=" . $row["dest"] . ">";
+                    //save the ID of the selected one
+                    echo "<input type=hidden name=s_ID value=" . $row["tID"] . ">";
+                    echo "</form>";
+
                 }
             }
         }
     } else {
         echo "<tr><td class = \"td1\">There is NO result.</td></tr>";
     }
-
 }
 ?>
 
@@ -137,7 +145,7 @@ function search_result($des, $timeA, $timeB){
     <a href="airplane.php"><img src="Res/logo.png" style="height: 60px; width: 60px; float: left; margin: 10px 10px">
         <span style="color: floralwhite; font-size: 60px;">Air159339<span></a>
     <span style="color: floralwhite; font-size: 60px; float:right"><a href="Userinfo.php">Hello, <?php      echo '&nbsp;&nbsp;';?></a>
-    <a herf=""><img class="login_icon" src="Res/logout.jpg"></a></span>
+    <a href="logoutsucc.php"><img class="login_icon" src="Res/logout.jpg"></a></span>
 
 </div>
 

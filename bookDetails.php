@@ -62,45 +62,55 @@
     <!--a href to go home page: logo-->
     <a href="airplane.php"><img src="Res/logo.png" style="height: 60px; width: 60px; float: left; margin: 10px 10px">
         <span style="color: floralwhite; font-size: 60px;">Air159339<span></a>
-    <span style="color: floralwhite; font-size: 60px; float:right"><a href="Userinfo.php">Hello, <?php      echo '&nbsp;&nbsp;';?></a>
-    <a herf=""><img class="login_icon" src="Res/logout.jpg"></a></span>
+    <span style="color: floralwhite; font-size: 60px; float:right"><a href="userinfo.php">Hello, <?php      echo '&nbsp;&nbsp;';?></a>
+    <a href="logoutsucc.php"><img class="login_icon" src="Res/logout.jpg"></a></span>
 
 </div>
 
 
-<div class="maintable" method="post">
-    <table class="table1" >
-        <tr>
-            <td colspan="2" class = "td1"><h1>Please check details of the Flight: </h1></td>
-        </tr>
+<div class="maintable">
+    <form name="check_table" method="post" action="userinfo.php">
+        <table class="table1" >
 
-        <tr>
-        </tr>
-        <tr>
-            <td  class = "td1" >Aircraft model: </td>
-            <td  class = "td1" ><?php  ?></td>
-            <td  class = "td1" ></td>
-        </tr>
+            <tr>
+                <td colspan="2" class = "td1"><h1>Please check details of the Flight: </h1></td>
+            </tr>
 
-        <tr>
-            <td  class = "td1" >Date: </td>
-            <td  class = "td1" ><?php echo $_POST['book_date']; ?></td>
-            <td  class = "td1" ></td>
-        </tr>
+            <tr>
+            </tr>
+            <tr>
+                <td  class = "td1" >Aircraft model: </td>
+                <td  class = "td1" ><?php  echo $_POST['aircraft'] ?></td>
+                <td  class = "td1" ></td>
+                <?php echo '<input name="aircraft" type="hidden" value=$_POST[\'aircraft\']>' ?>
+            </tr>
 
-        <tr>
-            <td  class = "td1" >Time: </td>
-            <td  class = "td1" ><?php ?></td>
-            <td  class = "td1" ></td>
-        </tr>
+            <tr>
+                <td  class = "td1" >Date: </td>
+                <td  class = "td1" ><?php echo $_POST['book_date'] ?></td>
+                <td  class = "td1" ></td>
+            </tr>
 
-        <tr>
-            <td  class = "td1" >Destination</td>
-            <td  class = "td1" >From: </td>
-            <td  class = "td1" >To:  </td>
-        </tr>
+            <tr>
+                <td  class = "td1" >Time: </td>
+                <td  class = "td1" ><?php echo $_POST['flt_time'] ?></td>
+                <td  class = "td1" ></td>
+            </tr>
 
-    </table>
+            <tr>
+                <td  class = "td1" >Destination</td>
+                <td  class = "td1" >From: <?php echo $_POST['from_w'] ?></td>
+                <td  class = "td1" >To:  <?php echo $_POST['to_w'] ?></td>
+            </tr>
+
+            <tr>
+                <td  class = "td1" ></td>
+                <td  class = "td1" ><input type="submit" value="OK"></td>
+                <td  class = "td1" ><input onclick="history.go(-1)" type="button" value="CANCEL"></td>
+            </tr>
+
+        </table>
+    </form>
 </div>
 
 <footer>

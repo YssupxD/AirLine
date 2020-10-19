@@ -119,11 +119,11 @@ CREATE TABLE Userinfo (
 
 CREATE TABLE Booking (
     username    VARCHAR(16)     NOT NULL    UNIQUE,
+    airport     VARCHAR(55)     NOT NULL,
     origin      VARCHAR(4)      NOT NULL,
     dest        VARCHAR(4)      NOT NULL,
     detDay      VARCHAR(3)    NOT NULL,
     depTime     VARCHAR(8)    NOT NULL,
-    flightTime  VARCHAR(8)    NOT NULL,
     FOREIGN KEY(username) REFERENCES Userinfo(username),
     FOREIGN KEY(origin) REFERENCES Destinations(code),
     FOREIGN KEY(dest) REFERENCES Destinations(code)

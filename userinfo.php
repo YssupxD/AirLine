@@ -108,7 +108,7 @@
 
             <tr>
                 <td colspan="2" class = "td1">
-                    <input type="submit" id="logout" name="logout" value="Log out">
+                    <input onclick="document.location.href='logoutsucc.php'" type="button" id="logout" name="logout" value="Log out">
                 </td>
             </tr>
         </table>

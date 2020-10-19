@@ -4,7 +4,7 @@ $password = isset($_POST['psw']) ? $_POST['psw'] : "";
 $remember = isset($_POST['remember']) ? $_POST['remember'] : "";
 //check if info is empty.
 if (!empty($username) && !empty($password)) {
-    $conn = mysqli_connect('localhost', 'root', '9512', 'AirLine');
+    $conn = mysqli_connect('localhost', 'jojo', 'spaceman', 'AirLine');
     $sql_select = "SELECT username,password FROM Userinfo WHERE username = '$username' AND password = '$password'";
     $ret = mysqli_query($conn, $sql_select);
     $row = mysqli_fetch_array($ret);
