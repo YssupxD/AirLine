@@ -10,7 +10,7 @@
     <?php
     session_start();
     $username = isset($_SESSION['user']) ? $_SESSION['user'] : "";
-    if (!empty($username)) { ?>
+    if (true) { ?>
         <h1>Registration Successfully！</h1>
         Welcome you!
         <?php

@@ -48,8 +48,8 @@
         }
         footer {
             width: 100%;
-            position: absolute;
-            bottom: 0;
+            position: fixed;
+            bottom: 0px;
         }
     </style>
 </head>
@@ -81,24 +81,37 @@
                         die("Connection Failed" . $conn->connect_error);
                     }
 
-                    $sql = "SELECT Userinfo.username, Userinfo.firstname, Userinfo.lastname, Booking.origin, Booking.dest
-                    FROM Userinfo
-                    INNER JOIN Booking
-                    WHERE Userinfo.logged = 'Yes'";
+
+                    #$sql = "SELECT Userinfo.username, Userinfo.firstname, Userinfo.lastname,
+                    #               Booking.airport, Booking.origin, Booking.dest, Booking.date, Booking.depTime
+                    #        FROM Userinfo
+                    #        INNER JOIN Booking
+                    #        WHERE Userinfo.logged = 'Yes'";
+                    $sql = "SELECT *
+                            FROM Userinfo
+                            INNER JOIN Booking
+                            WHERE Userinfo.logged = 'Yes'";
+                    #echo $sql;
                     $result = mysqli_query($conn, $sql);
-                    if($result = 'NULL'){
-                        echo "You have not booked any Flight";
+                    if($result == NULL){
+                        echo "You have not booked any flight";
                     }else{
-                        while($row = mysqli_fetch_array($result))
+                        while($row = mysqli_fetch_assoc($result))
                         {
-                            $username = $row['username'];
-                            echo "Username:" . $row['username'];
+                            #print_r($row);
+                            echo "Username: " . $row['username'];
                             echo "<br>";
                             echo "Name: " . $row['firstname'] . " " . $row['lastname'];
+                            echo "<br>";
+                            echo "Airport: " . $row['aircraft'];
                             echo "<br>";
                             echo "From: " . $row['origin'];
                             echo "<br>";
                             echo "To: " . $row['dest'];
+                            echo "<br>";
+                            echo "Date: " . $row['date'];
+                            echo "<br>";
+                            echo "DepTime: " . $row['depTime'];
                             echo "<br>";
                         }
                     }
@@ -107,6 +120,10 @@
             </tr>
 
             <tr>
+                <td></td>
+                <td colspan="2" class = "td1">
+                    <input onclick="document.location.href='airplane.php'" type="button" id="logout" name="logout" value="Home">
+                </td>
                 <td colspan="2" class = "td1">
                     <input onclick="document.location.href='logoutsucc.php'" type="button" id="logout" name="logout" value="Log out">
                 </td>

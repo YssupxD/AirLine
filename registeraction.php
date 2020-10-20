@@ -9,7 +9,7 @@ $re_password = isset($_POST['re_password']) ? $_POST['re_password'] : "";
 
 if ($password == $re_password) {
     //establish connection
-    $conn = mysqli_connect("localhost", "jojo", "spaceman", "Airline");
+    $conn = mysqli_connect("localhost", "root", "9512", "Airline");
     //prepare query line
     $sql_select = "SELECT username FROM Userinfo WHERE username = '$username'";
     //execute qurey.
@@ -21,7 +21,8 @@ if ($password == $re_password) {
         header("Location:registration.php?err=1");
     } else {
         //username has not been taken
-        $sql_insert = "INSERT INTO Userinfo(username,password,firstname,lastname) VALUES('$username','$password','$firstname', '$lastname')";
+        $sql_insert = "INSERT INTO Userinfo(username,password,firstname,lastname) 
+                       VALUES('$username','$password','$firstname', '$lastname')";
         mysqli_query($conn, $sql_insert);
         header("Location:registration.php?err=3");
         print('Loading home page in 3s...<br>');

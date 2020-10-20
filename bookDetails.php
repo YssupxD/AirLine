@@ -62,14 +62,14 @@
     <!--a href to go home page: logo-->
     <a href="airplane.php"><img src="Res/logo.png" style="height: 60px; width: 60px; float: left; margin: 10px 10px">
         <span style="color: floralwhite; font-size: 60px;">Air159339<span></a>
-    <span style="color: floralwhite; font-size: 60px; float:right"><a href="userinfo.php">Hello, <?php      echo '&nbsp;&nbsp;';?></a>
+    <span style="color: floralwhite; font-size: 60px; float:right"><a href="userinfo.php">Account></a>
     <a href="logoutsucc.php"><img class="login_icon" src="Res/logout.jpg"></a></span>
 
 </div>
 
 
 <div class="maintable">
-    <form name="check_table" method="post" action="userinfo.php">
+    <form id="check_table" method="post" action="bookingaction.php">
         <table class="table1" >
 
             <tr>
@@ -82,25 +82,36 @@
                 <td  class = "td1" >Aircraft model: </td>
                 <td  class = "td1" ><?php  echo $_POST['aircraft'] ?></td>
                 <td  class = "td1" ></td>
-                <?php echo '<input name="aircraft" type="hidden" value=$_POST[\'aircraft\']>' ?>
+                <?php $aircraft = $_POST['aircraft'];
+                echo "<input name=aircraft id = aircraft type=hidden value=$aircraft >" ?>
+
             </tr>
+
 
             <tr>
                 <td  class = "td1" >Date: </td>
                 <td  class = "td1" ><?php echo $_POST['book_date'] ?></td>
                 <td  class = "td1" ></td>
+                <?php $book_date = $_POST['book_date'];
+                echo "<input name=book_date id=book_date type=hidden value=$book_date ]>" ?>
             </tr>
 
             <tr>
                 <td  class = "td1" >Time: </td>
                 <td  class = "td1" ><?php echo $_POST['flt_time'] ?></td>
                 <td  class = "td1" ></td>
+                <?php $flt_time = $_POST['flt_time'];
+                echo "<input name=flt_time id=flt_time type=hidden value=$flt_time >" ?>
             </tr>
 
             <tr>
                 <td  class = "td1" >Destination</td>
                 <td  class = "td1" >From: <?php echo $_POST['from_w'] ?></td>
                 <td  class = "td1" >To:  <?php echo $_POST['to_w'] ?></td>
+                <?php $from_w = $_POST['from_w'];
+                      $to_w = $_POST['to_w'];
+                 echo "<input name=from_w id=from_w type=hidden value=$from_w>";
+                 echo "<input name=to_w id=to_w type=hidden value=$to_w>" ?>
             </tr>
 
             <tr>

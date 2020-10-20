@@ -145,7 +145,7 @@ function search_result($des, $timeA, $timeB){
     <!--a href to go home page: logo-->
     <a href="airplane.php"><img src="Res/logo.png" style="height: 60px; width: 60px; float: left; margin: 10px 10px">
         <span style="color: floralwhite; font-size: 60px;">Air159339<span></a>
-    <span style="color: floralwhite; font-size: 60px; float:right"><a href="Userinfo.php">Hello, <?php      echo '&nbsp;&nbsp;';?></a>
+    <span style="color: floralwhite; font-size: 60px; float:right"><a href="Userinfo.php">Account</a>
     <a href="logoutsucc.php"><img class="login_icon" src="Res/logout.jpg"></a></span>
 
 </div>
